@@ -5,12 +5,12 @@ import (
 	"time"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/luminancetech/varso/src/common/api"
-	"github.com/luminancetech/varso/src/services/auth/client/models"
-	"github.com/luminancetech/varso/src/services/auth/internal/config"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build"
-	"github.com/luminancetech/varso/src/services/auth/internal/modules/role"
-	"github.com/luminancetech/varso/src/services/auth/internal/modules/user"
+	"github.com/lumi4x/news/src/common/api"
+	"github.com/lumi4x/news/src/services/auth/client/models"
+	"github.com/lumi4x/news/src/services/auth/internal/config"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build"
+	"github.com/lumi4x/news/src/services/auth/internal/modules/role"
+	"github.com/lumi4x/news/src/services/auth/internal/modules/user"
 )
 
 func Register(_ *api.Writer, r *http.Request, _ httprouter.Params, _ *api.JWT, request models.RegisterRequest) (*models.RegisterResponse, *api.Error) {

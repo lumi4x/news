@@ -4,10 +4,10 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/role"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/user"
+	"github.com/lumi4x/news/src/services/auth/internal/ent"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/role"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/user"
 )
 
 func Upsert(ctx context.Context, roleUUID uuid.UUID, key string, permissions []string) error {

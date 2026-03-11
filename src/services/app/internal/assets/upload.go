@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"path/filepath"
 
-	auth_client "github.com/luminancetech/varso/src/services/auth/client"
-	"github.com/luminancetech/varso/src/services/fileserver/client"
+	auth_client "github.com/lumi4x/news/src/services/auth/client"
+	"github.com/lumi4x/news/src/services/fileserver/client"
 	"github.com/sirupsen/logrus"
 )
 

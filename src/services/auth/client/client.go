@@ -3,9 +3,9 @@ package client
 import (
 	"net/http"
 
-	"github.com/luminancetech/varso/src/common/api"
-	"github.com/luminancetech/varso/src/common/config"
-	"github.com/luminancetech/varso/src/services/auth/client/models"
+	"github.com/lumi4x/news/src/common/api"
+	"github.com/lumi4x/news/src/common/config"
+	"github.com/lumi4x/news/src/services/auth/client/models"
 )
 
 type Client struct {

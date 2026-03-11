@@ -24,7 +24,6 @@ tmp
 .DS_Store
 /log/
 *.pem
-*.pb.go
 node_modules/
 .idea
 

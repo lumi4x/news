@@ -1,6 +1,6 @@
 # Varso API
 
-![CI/CD](https://github.com/luminancetech/varso/actions/workflows/.github/workflows/cicd.yaml/badge.svg)
+![CI/CD](https://github.com/lumi4x/news/actions/workflows/.github/workflows/cicd.yaml/badge.svg)
 
 ## Prerequisites
 

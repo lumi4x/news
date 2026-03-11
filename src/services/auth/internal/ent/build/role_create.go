@@ -11,8 +11,8 @@ import (
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/role"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/user"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/role"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/user"
 )
 
 // RoleCreate is the builder for creating a Role entity.

@@ -2,19 +2,19 @@ package news
 
 import (
 	"context"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/rank"
+	"github.com/lumi4x/news/src/services/app/internal/modules/rank"
 	"regexp"
 	"strings"
 	"sync"
 	"time"
 
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/gofeed"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/html"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/newsitem"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/organization"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/rssauthor"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/rssfeed"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build"
+	"github.com/lumi4x/news/src/services/app/internal/modules/gofeed"
+	"github.com/lumi4x/news/src/services/app/internal/modules/html"
+	"github.com/lumi4x/news/src/services/app/internal/modules/newsitem"
+	"github.com/lumi4x/news/src/services/app/internal/modules/organization"
+	"github.com/lumi4x/news/src/services/app/internal/modules/rssauthor"
+	"github.com/lumi4x/news/src/services/app/internal/modules/rssfeed"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 )

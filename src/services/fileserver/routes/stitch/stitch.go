@@ -10,11 +10,11 @@ import (
 	"os"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/luminancetech/varso/src/common/api"
-	common_config "github.com/luminancetech/varso/src/common/config"
-	"github.com/luminancetech/varso/src/services/fileserver/client"
-	"github.com/luminancetech/varso/src/services/fileserver/config"
-	"github.com/luminancetech/varso/src/services/fileserver/utils/filestorage"
+	"github.com/lumi4x/news/src/common/api"
+	common_config "github.com/lumi4x/news/src/common/config"
+	"github.com/lumi4x/news/src/services/fileserver/client"
+	"github.com/lumi4x/news/src/services/fileserver/config"
+	"github.com/lumi4x/news/src/services/fileserver/utils/filestorage"
 	"github.com/sirupsen/logrus"
 )
 

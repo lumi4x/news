@@ -14,7 +14,7 @@ import (
 	"ariga.io/atlas/sql/sqltool"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql/schema"
-	common_config "github.com/luminancetech/varso/src/common/config"
+	common_config "github.com/lumi4x/news/src/common/config"
 	"github.com/sirupsen/logrus"
 )
 

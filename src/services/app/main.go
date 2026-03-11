@@ -3,11 +3,11 @@ package main
 import (
 	"context"
 
-	common_config "github.com/luminancetech/varso/src/common/config"
-	"github.com/luminancetech/varso/src/common/maingroup"
-	"github.com/luminancetech/varso/src/services/app/internal/ent"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/news"
-	"github.com/luminancetech/varso/src/services/app/internal/router"
+	common_config "github.com/lumi4x/news/src/common/config"
+	"github.com/lumi4x/news/src/common/maingroup"
+	"github.com/lumi4x/news/src/services/app/internal/ent"
+	"github.com/lumi4x/news/src/services/app/internal/modules/news"
+	"github.com/lumi4x/news/src/services/app/internal/router"
 	"github.com/sirupsen/logrus"
 )
 

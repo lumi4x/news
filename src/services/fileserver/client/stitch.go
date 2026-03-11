@@ -1,6 +1,6 @@
 package client
 
-import "github.com/luminancetech/varso/src/common/api"
+import "github.com/lumi4x/news/src/common/api"
 
 type StitchRequest struct {
 	StorageKeys []string

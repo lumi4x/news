@@ -3,8 +3,8 @@ package router
 import (
 	"context"
 
-	"github.com/luminancetech/varso/src/common/api"
-	"github.com/luminancetech/varso/src/services/auth/internal/router/routes/login"
+	"github.com/lumi4x/news/src/common/api"
+	"github.com/lumi4x/news/src/services/auth/internal/router/routes/login"
 )
 
 func ListenAndServe(ctx context.Context) error {

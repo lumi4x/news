@@ -9,12 +9,12 @@ import (
 	"log"
 	"reflect"
 
-	"github.com/luminancetech/varso/src/services/fileserver/ent/build/migrate"
+	"github.com/lumi4x/news/src/services/fileserver/ent/build/migrate"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
-	"github.com/luminancetech/varso/src/services/fileserver/ent/build/checkpoint"
+	"github.com/lumi4x/news/src/services/fileserver/ent/build/checkpoint"
 
 	stdsql "database/sql"
 )

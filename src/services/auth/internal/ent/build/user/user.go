@@ -67,7 +67,7 @@ func ValidColumn(column string) bool {
 // package on the initialization of the application. Therefore,
 // it should be imported in the main as follows:
 //
-//	import _ "github.com/luminancetech/varso/src/services/auth/internal/ent/build/runtime"
+//	import _ "github.com/lumi4x/news/src/services/auth/internal/ent/build/runtime"
 var (
 	Hooks        [1]ent.Hook
 	Interceptors [2]ent.Interceptor

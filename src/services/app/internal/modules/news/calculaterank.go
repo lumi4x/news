@@ -2,9 +2,9 @@ package news
 
 import (
 	"context"
-	"github.com/luminancetech/varso/src/services/app/internal/ent"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/newsitem"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/rank"
+	"github.com/lumi4x/news/src/services/app/internal/ent"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/newsitem"
+	"github.com/lumi4x/news/src/services/app/internal/modules/rank"
 	"github.com/sirupsen/logrus"
 )
 

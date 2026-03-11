@@ -5,8 +5,8 @@ package build
 import (
 	"time"
 
-	"github.com/luminancetech/varso/src/services/fileserver/ent/build/checkpoint"
-	"github.com/luminancetech/varso/src/services/fileserver/ent/schema"
+	"github.com/lumi4x/news/src/services/fileserver/ent/build/checkpoint"
+	"github.com/lumi4x/news/src/services/fileserver/ent/schema"
 )
 
 // The init function reads all schema descriptors with runtime code

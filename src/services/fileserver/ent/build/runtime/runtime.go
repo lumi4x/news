@@ -2,7 +2,7 @@
 
 package runtime
 
-// The schema-stitching logic is generated in github.com/luminancetech/varso/src/services/fileserver/ent/build/runtime.go
+// The schema-stitching logic is generated in github.com/lumi4x/news/src/services/fileserver/ent/build/runtime.go
 
 const (
 	Version = "v0.13.1"                                         // Version of ent codegen.

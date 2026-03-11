@@ -2,9 +2,9 @@ package feedtype
 
 import (
 	"context"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build"
-	dbnewsitem "github.com/luminancetech/varso/src/services/app/internal/ent/build/newsitem"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/newsitem"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build"
+	dbnewsitem "github.com/lumi4x/news/src/services/app/internal/ent/build/newsitem"
+	"github.com/lumi4x/news/src/services/app/internal/modules/newsitem"
 )
 
 type ForYou struct {

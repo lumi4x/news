@@ -1,8 +1,8 @@
 package user
 
 import (
-	"github.com/luminancetech/varso/src/services/auth/client/models"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build"
+	"github.com/lumi4x/news/src/services/auth/client/models"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build"
 )
 
 func TranslateUser(user *build.User) *models.User {

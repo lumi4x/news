@@ -6,10 +6,10 @@ import (
 	"os"
 
 	_ "github.com/lib/pq"
-	"github.com/luminancetech/varso/src/common/database"
-	"github.com/luminancetech/varso/src/services/app/config"
-	"github.com/luminancetech/varso/src/services/app/internal/ent"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/migrate"
+	"github.com/lumi4x/news/src/common/database"
+	"github.com/lumi4x/news/src/services/app/config"
+	"github.com/lumi4x/news/src/services/app/internal/ent"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/migrate"
 	"github.com/sirupsen/logrus"
 )
 

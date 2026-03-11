@@ -2,4 +2,4 @@
 
 package build
 
-// The schema-stitching logic is generated in github.com/luminancetech/varso/src/services/auth/internal/ent/build/runtime/runtime.go
+// The schema-stitching logic is generated in github.com/lumi4x/news/src/services/auth/internal/ent/build/runtime/runtime.go

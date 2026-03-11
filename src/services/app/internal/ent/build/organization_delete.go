@@ -8,8 +8,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/organization"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/predicate"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/organization"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/predicate"
 )
 
 // OrganizationDelete is the builder for deleting a Organization entity.

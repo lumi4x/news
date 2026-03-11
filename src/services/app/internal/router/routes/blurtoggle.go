@@ -5,10 +5,10 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/julienschmidt/httprouter"
-	"github.com/luminancetech/varso/src/common/api"
-	"github.com/luminancetech/varso/src/services/app/client/models"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/newsitem"
-	"github.com/luminancetech/varso/src/services/auth/client"
+	"github.com/lumi4x/news/src/common/api"
+	"github.com/lumi4x/news/src/services/app/client/models"
+	"github.com/lumi4x/news/src/services/app/internal/modules/newsitem"
+	"github.com/lumi4x/news/src/services/auth/client"
 )
 
 func BlurToggle(w *api.Writer, r *http.Request, p httprouter.Params, j *api.JWT, request models.BlurToggleRequest) (*any, *api.Error) {

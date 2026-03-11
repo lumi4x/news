@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/luminancetech/varso/src/services/fileserver/ent/build"
+	"github.com/lumi4x/news/src/services/fileserver/ent/build"
 )
 
 // The CheckpointFunc type is an adapter to allow the use of ordinary

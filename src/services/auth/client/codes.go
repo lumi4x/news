@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/luminancetech/varso/src/common/api"
+	"github.com/lumi4x/news/src/common/api"
 	"github.com/sirupsen/logrus"
 )
 

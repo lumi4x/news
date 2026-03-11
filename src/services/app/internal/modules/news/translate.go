@@ -5,8 +5,8 @@ import (
 	"regexp"
 
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/app/client/models"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build"
+	"github.com/lumi4x/news/src/services/app/client/models"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build"
 	"google.golang.org/protobuf/types/known/timestamppb"
 )
 

@@ -12,12 +12,12 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/newsitem"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/organization"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/person"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/predicate"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/rssauthor"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/rssfeed"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/newsitem"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/organization"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/person"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/predicate"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/rssauthor"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/rssfeed"
 )
 
 const (

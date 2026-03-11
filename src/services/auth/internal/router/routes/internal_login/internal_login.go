@@ -4,9 +4,9 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/luminancetech/varso/src/common/api"
-	"github.com/luminancetech/varso/src/common/config"
-	"github.com/luminancetech/varso/src/services/auth/client/models"
+	"github.com/lumi4x/news/src/common/api"
+	"github.com/lumi4x/news/src/common/config"
+	"github.com/lumi4x/news/src/services/auth/client/models"
 )
 
 func InternalLogin(_ *api.Writer, r *http.Request, _ httprouter.Params, _ *api.JWT, request models.InternalLoginRequest) (*models.InternalLoginResponse, *api.Error) {

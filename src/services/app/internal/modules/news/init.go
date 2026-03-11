@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/app/client/models"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/organization"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/rssfeed"
+	"github.com/lumi4x/news/src/services/app/client/models"
+	"github.com/lumi4x/news/src/services/app/internal/modules/organization"
+	"github.com/lumi4x/news/src/services/app/internal/modules/rssfeed"
 	"github.com/pkg/errors"
 )
 

@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/luminancetech/varso/src/services/auth/client"
+	"github.com/lumi4x/news/src/services/auth/client"
 )
 
 type Client struct {

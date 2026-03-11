@@ -28,4 +28,3 @@ export NPM_TOKEN=$npm_token
 
 ./scripts/apply_env.sh .env
 ./scripts/apply_env.sh ./src/services/www/src/config/config.ts
-./scripts/apply_env.sh ./src/services/loki/minio-config.yaml

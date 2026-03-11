@@ -12,28 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  PROD_EC2_PRIVATE_KEY: ${{ secrets.PROD_EC2_PRIVATE_KEY }}
-  PROD_EC2_HOSTNAME: ${{ vars.PROD_EC2_HOSTNAME }}
-  PROD_EC2_USERNAME: ${{ vars.PROD_EC2_USERNAME }}
-  PROD_EC2_PROJECT_PATH: ${{ vars.PROD_EC2_PROJECT_PATH }}
-  JWT_SECRET: ${{ secrets.JWT_SECRET }}
-  INTERNAL_AUTH_SECRET: ${{ secrets.INTERNAL_AUTH_SECRET }}
-  FILESTORAGE_ACCESS_KEY: ${{ secrets.FILESTORAGE_ACCESS_KEY }}
-  FILESTORAGE_SECRET_KEY: ${{ secrets.FILESTORAGE_SECRET_KEY }}
-  DISCORD_BOT_ADMIN_USER_ID: ${{ secrets.DISCORD_BOT_ADMIN_USER_ID }}
-  POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-  SYSTEM_EXTERNAL_URL: ${{ vars.SYSTEM_EXTERNAL_URL }}
-  GF_SECURITY_ADMIN_USER: ${{ secrets.GF_SECURITY_ADMIN_USER }}
-  GF_SECURITY_ADMIN_PASSWORD: ${{ secrets.GF_SECURITY_ADMIN_PASSWORD }}
-  ALERTS_DISCORD_WEBHOOK: ${{ secrets.ALERTS_DISCORD_WEBHOOK }}
-  APP_ENV: PROD
   CONTAINER_REGISTRY: ${{ vars.CONTAINER_REGISTRY }}
-  CERTBOT_DOMAINS: ${{ vars.CERTBOT_DOMAINS }}
-  CERTBOT_EMAIL: ${{ vars.CERTBOT_EMAIL }}
-  AUTH_ADMIN_EMAIL: ${{ secrets.AUTH_ADMIN_EMAIL }}
-  AUTH_ADMIN_PASSWORD: ${{ secrets.AUTH_ADMIN_PASSWORD }}
-  PLAUSIBLE_SECRET_KEY: ${{ secrets.PLAUSIBLE_SECRET_KEY }}
-  PLAUSIBLE_BASE_URL: ${{ vars.PLAUSIBLE_BASE_URL }}
 
 jobs:
   gosec:
@@ -54,71 +33,6 @@ jobs:
       - name: Run Gosec Security Scanner
         uses: securego/gosec@master
 
-  # test_www:
-  #   name: Test www
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-
-  #     - name: "Use node ${{ env.NODE_VERSION }}"
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: "${{ env.NODE_VERSION }}"
-
-  #     - name: Install dependencies
-  #       run: |
-  #         cd ./src/services/www
-  #         echo //${{ vars.CONTAINER_REGISTRY }}/:_authToken=\${{ github.token }} > .npmrc
-  #         yarn install --frozen-lockfile
-
-  #     - name: Lint check
-  #       run: |
-  #         cd ./src/services/www
-  #         yarn lint
-
-  #     - name: Format check
-  #       run: |
-  #         cd ./src/services/www
-  #         yarn prettier
-
-  #     # - name: Unit & Integration tests
-  #     #   run: |
-  #     #     cd ./src/services/www
-  #     #     yarn test
-
-  #     - name: Smoke & Acceptance tests
-  #       run: |
-  #         yarn build-storybook --quiet
-  #         npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-  #           "npx http-server storybook-static --port 6006 --silent" \
-  #           "npx wait-on tcp:127.0.0.1:6006 && yarn test-storybook"
-
-  # test:
-  #   timeout-minutes: 60
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-
-  #     - name: "use node ${{ env.NODE_VERSION }}"
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: "${{ env.NODE_VERSION }}"
-
-  #     - name: Install dependencies
-  #       run: yarn install --frozen-lockfile
-
-  #     - name: Install Playwright Browsers
-  #       run: yarn playwright install --with-deps
-
-  #     - name: Run Playwright tests
-  #       run: yarn playwright test
-
-  #     - uses: actions/upload-artifact@v3
-  #       if: always()
-  #       with:
-  #         name: playwright-report
-  #         path: playwright-report/
-  #         retention-days: 30
 
   build-and-push-image:
     name: "Build and push image"
@@ -140,25 +54,6 @@ jobs:
             build-args: |
               SERVICE=fileserver
               PORT=5002
-          - service: analytics
-            build-args: |
-              SERVICE=analytics
-              PORT=5003
-          - service: nginx
-          - service: postgres
-          - service: certbot
-            build-args: |
-              CERTBOT_DOMAINS=${{ vars.CERTBOT_DOMAINS }}
-              CERTBOT_EMAIL=${{ vars.CERTBOT_EMAIL }}
-          - service: alertmanager
-          - service: alertmanager_discord
-            build-args: |
-              SERVICE=alertmanager_discord
-              PORT=9094
-          - service: prometheus
-          - service: loki
-          - service: grafana
-          - service: promtail
 
     permissions:
       contents: read
@@ -232,38 +127,9 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
-  test-services-health:
-    name: "Test Services Health"
-    needs: [build-and-push-image]
-    runs-on: ubuntu-latest
-    env:
-      GO111MODULE: on
-    permissions:
-      contents: read
-      packages: read
-    steps:
-      - name: Checkout Source
-        uses: actions/checkout@v3
-
-      - name: Log in to the Container registry
-        uses: docker/login-action@v2
-        with:
-          registry: ${{ env.CONTAINER_REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Start Docker Compose
-        run: |
-          export GIT_FULL_REPO_NAME=${{ github.repository }}
-          export DOCKER_IMAGE_TAG=${{ github.ref_name }}
-          export USE_TEST_CERT=true
-          ./scripts/apply_env.sh .env
-          ./scripts/cicd/test_go/start_docker_compose.sh
-          ./scripts/cicd/test_go/docker_compose_healthcheck.sh
-
   release:
     name: "Release"
-    needs: [test-services-health]
+    needs: [build-and-push-image]
     runs-on: "ubuntu-latest"
     if: startsWith(github.ref, 'refs/tags/') && !contains(github.ref, 'alpha') && github.event_name == 'push'
     strategy:
@@ -296,61 +162,3 @@ jobs:
             } catch (error) {
               core.setFailed(error.message);
             }
-
-  deploy:
-    timeout-minutes: 20
-    needs: [release]
-    runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/') && !contains(github.ref, 'alpha') && github.event_name == 'push'
-    strategy:
-      matrix:
-        tag: [true]
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Deploy to production machine
-        run: |
-          echo "Deploying to ${PROD_EC2_HOSTNAME} with ${PROD_EC2_USERNAME} user"
-
-          echo "ClientAliveInterval 60" | sudo tee -a /etc/ssh/sshd_config
-          echo "$PROD_EC2_PRIVATE_KEY" > private_key && chmod 600 private_key
-
-          echo "Creating project dir"
-          ssh -o StrictHostKeyChecking=no -i private_key ${PROD_EC2_USERNAME}@${PROD_EC2_HOSTNAME} "mkdir -p ${PROD_EC2_PROJECT_PATH}"
-
-          echo "Copying .env file"
-          export GIT_FULL_REPO_NAME=${{ github.repository }}
-          export DOCKER_IMAGE_TAG=${{ github.ref_name }}
-          export USE_TEST_CERT=false
-          ./scripts/apply_env.sh .env
-          scp -o StrictHostKeyChecking=no -i private_key .env ${PROD_EC2_USERNAME}@${PROD_EC2_HOSTNAME}:${PROD_EC2_PROJECT_PATH}/.env
-
-          echo "Copying docker-compose.yaml file"
-          scp -o StrictHostKeyChecking=no -i private_key docker-compose.yaml ${PROD_EC2_USERNAME}@${PROD_EC2_HOSTNAME}:${PROD_EC2_PROJECT_PATH}/docker-compose.yaml
-
-          echo "Launching services"
-          ssh -o StrictHostKeyChecking=no -i private_key ${PROD_EC2_USERNAME}@${PROD_EC2_HOSTNAME} "
-            echo Project path: ${PROD_EC2_PROJECT_PATH}
-            cd ${PROD_EC2_PROJECT_PATH}
-            ls -a
-            echo \"${{ github.token }}\" | docker login ghcr.io -u \"{{ github.actor }}\" --password-stdin
-            docker compose up -d
-          " || exit 1
-
-      - name: Send Discord message on success
-        if: success()
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.ALERTS_DISCORD_WEBHOOK }}
-          DISCORD_AVATAR: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-        uses: Ilshidur/action-discord@master
-        with:
-          args: "SUCCESS: Project {{ EVENT_PAYLOAD.repository.full_name }} was deployed successfully.\n${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-
-      - name: Send Discord message on failure
-        if: failure()
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.ALERTS_DISCORD_WEBHOOK }}
-          DISCORD_AVATAR: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-        uses: Ilshidur/action-discord@master
-        with:
-          args: "FAILURE: Project {{ EVENT_PAYLOAD.repository.full_name }} failed to deploy.\n${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

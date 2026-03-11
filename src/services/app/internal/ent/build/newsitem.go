@@ -11,8 +11,8 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/newsitem"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/rssfeed"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/newsitem"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/rssfeed"
 )
 
 // NewsItem is the model entity for the NewsItem schema.

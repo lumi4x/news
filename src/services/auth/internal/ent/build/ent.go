@@ -12,8 +12,8 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/role"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/user"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/role"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/user"
 )
 
 // ent aliases to avoid import conflicts in user's code.

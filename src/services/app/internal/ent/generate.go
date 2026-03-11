@@ -1,7 +1,7 @@
 package ent
 
 import (
-	_ "github.com/luminancetech/varso/src/services/app/internal/ent/build/runtime"
+	_ "github.com/lumi4x/news/src/services/app/internal/ent/build/runtime"
 )
 
 // NOTE: Specifying '--target build' requires it to point to a go package, so if this is the

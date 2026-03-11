@@ -9,7 +9,7 @@ import (
 	"github.com/golang-migrate/migrate/v4/source"
 	"github.com/lib/pq"
 	_ "github.com/lib/pq"
-	"github.com/luminancetech/varso/src/common/config"
+	"github.com/lumi4x/news/src/common/config"
 	"github.com/pkg/errors"
 )
 

@@ -11,8 +11,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"github.com/luminancetech/varso/src/services/fileserver/ent/build/checkpoint"
-	"github.com/luminancetech/varso/src/services/fileserver/ent/build/predicate"
+	"github.com/lumi4x/news/src/services/fileserver/ent/build/checkpoint"
+	"github.com/lumi4x/news/src/services/fileserver/ent/build/predicate"
 )
 
 // CheckpointUpdate is the builder for updating Checkpoint entities.

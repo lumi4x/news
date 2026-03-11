@@ -5,12 +5,12 @@ package enttest
 import (
 	"context"
 
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build"
 	// required by schema hooks.
-	_ "github.com/luminancetech/varso/src/services/auth/internal/ent/build/runtime"
+	_ "github.com/lumi4x/news/src/services/auth/internal/ent/build/runtime"
 
 	"entgo.io/ent/dialect/sql/schema"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/migrate"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/migrate"
 )
 
 type (

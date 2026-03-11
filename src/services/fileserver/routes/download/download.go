@@ -7,9 +7,9 @@ import (
 	"strings"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/luminancetech/varso/src/common/api"
-	"github.com/luminancetech/varso/src/services/fileserver/config"
-	"github.com/luminancetech/varso/src/services/fileserver/utils/filestorage"
+	"github.com/lumi4x/news/src/common/api"
+	"github.com/lumi4x/news/src/services/fileserver/config"
+	"github.com/lumi4x/news/src/services/fileserver/utils/filestorage"
 )
 
 var FilenameRegex = regexp.MustCompile("^[A-Za-z0-9]+")

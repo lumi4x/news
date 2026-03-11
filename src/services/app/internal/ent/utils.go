@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build"
 	"github.com/sirupsen/logrus"
 )
 

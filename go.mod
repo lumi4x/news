@@ -1,6 +1,6 @@
-module github.com/luminancetech/varso
+module github.com/lumi4x/news
 
-go 1.22.0
+go 1.26.1
 
 require (
 	ariga.io/atlas v0.19.1-0.20240203083654-5948b60a8e43
@@ -14,6 +14,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.0
 	github.com/stretchr/testify v1.8.2
+	golang.org/x/net v0.21.0
 	google.golang.org/protobuf v1.33.0
 )
 
@@ -28,7 +29,6 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	golang.org/x/net v0.21.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 

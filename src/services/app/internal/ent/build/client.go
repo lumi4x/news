@@ -10,17 +10,17 @@ import (
 	"reflect"
 
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/migrate"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/migrate"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/newsitem"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/organization"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/person"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/rssauthor"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/rssfeed"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/newsitem"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/organization"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/person"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/rssauthor"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/rssfeed"
 
 	stdsql "database/sql"
 )

@@ -9,7 +9,7 @@ import (
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
-	"github.com/luminancetech/varso/src/services/fileserver/ent/build/checkpoint"
+	"github.com/lumi4x/news/src/services/fileserver/ent/build/checkpoint"
 )
 
 // Checkpoint is the model entity for the Checkpoint schema.

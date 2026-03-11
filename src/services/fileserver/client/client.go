@@ -3,9 +3,9 @@ package client
 import (
 	"fmt"
 
-	"github.com/luminancetech/varso/src/common/api"
-	common_config "github.com/luminancetech/varso/src/common/config"
-	"github.com/luminancetech/varso/src/services/auth/client"
+	"github.com/lumi4x/news/src/common/api"
+	common_config "github.com/lumi4x/news/src/common/config"
+	"github.com/lumi4x/news/src/services/auth/client"
 )
 
 type Client struct {

@@ -2,11 +2,11 @@ package routes
 
 import (
 	"github.com/julienschmidt/httprouter"
-	"github.com/luminancetech/varso/src/common/api"
-	"github.com/luminancetech/varso/src/services/app/client/models"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/feedtype"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/news"
-	"github.com/luminancetech/varso/src/services/app/internal/modules/organization"
+	"github.com/lumi4x/news/src/common/api"
+	"github.com/lumi4x/news/src/services/app/client/models"
+	"github.com/lumi4x/news/src/services/app/internal/modules/feedtype"
+	"github.com/lumi4x/news/src/services/app/internal/modules/news"
+	"github.com/lumi4x/news/src/services/app/internal/modules/organization"
 	"github.com/sirupsen/logrus"
 	"net/http"
 )

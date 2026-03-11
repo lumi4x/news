@@ -3,12 +3,12 @@ package main
 import (
 	"context"
 
-	"github.com/luminancetech/varso/src/common/config"
-	"github.com/luminancetech/varso/src/common/maingroup"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent"
-	"github.com/luminancetech/varso/src/services/auth/internal/modules/role"
-	"github.com/luminancetech/varso/src/services/auth/internal/modules/user"
-	"github.com/luminancetech/varso/src/services/auth/internal/router"
+	"github.com/lumi4x/news/src/common/config"
+	"github.com/lumi4x/news/src/common/maingroup"
+	"github.com/lumi4x/news/src/services/auth/internal/ent"
+	"github.com/lumi4x/news/src/services/auth/internal/modules/role"
+	"github.com/lumi4x/news/src/services/auth/internal/modules/user"
+	"github.com/lumi4x/news/src/services/auth/internal/router"
 	"github.com/sirupsen/logrus"
 )
 

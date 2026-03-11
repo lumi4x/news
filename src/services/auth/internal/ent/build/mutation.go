@@ -12,9 +12,9 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/predicate"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/role"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/user"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/predicate"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/role"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/user"
 )
 
 const (

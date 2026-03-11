@@ -13,9 +13,9 @@ import (
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/newsitem"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/rssauthor"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/build/rssfeed"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/newsitem"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/rssauthor"
+	"github.com/lumi4x/news/src/services/app/internal/ent/build/rssfeed"
 )
 
 // NewsItemCreate is the builder for creating a NewsItem entity.

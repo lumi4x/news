@@ -7,7 +7,7 @@ import (
 	"entgo.io/ent/schema/index"
 	"entgo.io/ent/schema/mixin"
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/app/internal/ent/mixins"
+	"github.com/lumi4x/news/src/services/app/internal/ent/mixins"
 )
 
 type NewsItem struct {

@@ -10,7 +10,7 @@ import (
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/role"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/role"
 )
 
 // Role is the model entity for the Role schema.

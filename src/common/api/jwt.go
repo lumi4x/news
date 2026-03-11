@@ -7,7 +7,7 @@ import (
 
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/common/config"
+	"github.com/lumi4x/news/src/common/config"
 	"github.com/pkg/errors"
 )
 

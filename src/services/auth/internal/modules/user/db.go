@@ -8,13 +8,13 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/luminancetech/varso/src/common/api"
-	"github.com/luminancetech/varso/src/services/auth/internal/config"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/role"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/user"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/mixins"
+	"github.com/lumi4x/news/src/common/api"
+	"github.com/lumi4x/news/src/services/auth/internal/config"
+	"github.com/lumi4x/news/src/services/auth/internal/ent"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/role"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/user"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/mixins"
 	"golang.org/x/crypto/pbkdf2"
 )
 

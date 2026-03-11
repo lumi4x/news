@@ -4,8 +4,8 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/auth/client"
-	"github.com/luminancetech/varso/src/services/auth/client/models"
+	"github.com/lumi4x/news/src/services/auth/client"
+	"github.com/lumi4x/news/src/services/auth/client/models"
 	"github.com/pkg/errors"
 )
 

@@ -4,12 +4,12 @@ import (
 	"context"
 	"log"
 
-	"github.com/luminancetech/varso/src/common/api"
-	common_config "github.com/luminancetech/varso/src/common/config"
-	"github.com/luminancetech/varso/src/services/fileserver/ent"
-	"github.com/luminancetech/varso/src/services/fileserver/routes/download"
-	"github.com/luminancetech/varso/src/services/fileserver/routes/stitch"
-	"github.com/luminancetech/varso/src/services/fileserver/routes/upload"
+	"github.com/lumi4x/news/src/common/api"
+	common_config "github.com/lumi4x/news/src/common/config"
+	"github.com/lumi4x/news/src/services/fileserver/ent"
+	"github.com/lumi4x/news/src/services/fileserver/routes/download"
+	"github.com/lumi4x/news/src/services/fileserver/routes/stitch"
+	"github.com/lumi4x/news/src/services/fileserver/routes/upload"
 	"github.com/sirupsen/logrus"
 )
 

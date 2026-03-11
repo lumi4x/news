@@ -7,10 +7,10 @@ import (
 	_ "github.com/golang-migrate/migrate/v4/database/postgres"
 	"github.com/golang-migrate/migrate/v4/source/iofs"
 	_ "github.com/lib/pq"
-	common_config "github.com/luminancetech/varso/src/common/config"
-	"github.com/luminancetech/varso/src/common/database"
-	"github.com/luminancetech/varso/src/services/auth/internal/config"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build"
+	common_config "github.com/lumi4x/news/src/common/config"
+	"github.com/lumi4x/news/src/common/database"
+	"github.com/lumi4x/news/src/services/auth/internal/config"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build"
 	"github.com/pkg/errors"
 )
 

@@ -8,7 +8,7 @@ import (
 	"entgo.io/ent/schema/field"
 	"entgo.io/ent/schema/index"
 	"github.com/google/uuid"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/mixins"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/mixins"
 )
 
 type User struct {

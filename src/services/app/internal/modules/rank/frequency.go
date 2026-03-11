@@ -3,7 +3,7 @@ package rank
 import (
 	"math"
 
-	"github.com/luminancetech/varso/src/services/app/client/models"
+	"github.com/lumi4x/news/src/services/app/client/models"
 )
 
 type FrequencyRanker struct {

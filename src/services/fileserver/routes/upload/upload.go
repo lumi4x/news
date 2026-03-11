@@ -4,10 +4,10 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/luminancetech/varso/src/common/api"
-	"github.com/luminancetech/varso/src/services/fileserver/client"
-	"github.com/luminancetech/varso/src/services/fileserver/config"
-	"github.com/luminancetech/varso/src/services/fileserver/utils/filestorage"
+	"github.com/lumi4x/news/src/common/api"
+	"github.com/lumi4x/news/src/services/fileserver/client"
+	"github.com/lumi4x/news/src/services/fileserver/config"
+	"github.com/lumi4x/news/src/services/fileserver/utils/filestorage"
 )
 
 func Upload(w *api.Writer, r *http.Request, _ httprouter.Params, jwt *api.JWT, _ any) (*client.UploadResponse, *api.Error) {

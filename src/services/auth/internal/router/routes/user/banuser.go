@@ -6,13 +6,13 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/julienschmidt/httprouter"
-	"github.com/luminancetech/varso/src/common/api"
-	"github.com/luminancetech/varso/src/services/auth/client"
-	"github.com/luminancetech/varso/src/services/auth/client/models"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/user"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/mixins"
+	"github.com/lumi4x/news/src/common/api"
+	"github.com/lumi4x/news/src/services/auth/client"
+	"github.com/lumi4x/news/src/services/auth/client/models"
+	"github.com/lumi4x/news/src/services/auth/internal/ent"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/user"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/mixins"
 )
 
 func BanUser(_ *api.Writer, r *http.Request, params httprouter.Params, _ *api.JWT, _ models.BanUserRequest) (*models.BanUserResponse, *api.Error) {

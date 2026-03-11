@@ -9,9 +9,9 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/schema/field"
 	"entgo.io/ent/schema/mixin"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/hook"
-	"github.com/luminancetech/varso/src/services/auth/internal/ent/build/intercept"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/hook"
+	"github.com/lumi4x/news/src/services/auth/internal/ent/build/intercept"
 )
 
 // SoftDeleteMixin implements the soft delete pattern for schemas.

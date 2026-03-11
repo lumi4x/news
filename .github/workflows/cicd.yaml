@@ -36,7 +36,6 @@ jobs:
 
   build-and-push-image:
     name: "Build and push image"
-    needs: [gosec]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

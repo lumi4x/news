@@ -65,8 +65,8 @@ jobs:
       - name: Load env
         run: ./scripts/apply_env.sh .env
 
-      - name: Go Generate
-        run: ./scripts/cicd/build_go/install_and_generate.sh
+#      - name: Go Generate
+#        run: ./scripts/cicd/build_go/install_and_generate.sh
 
       - name: Log in to the Container registry
         uses: docker/login-action@v2
